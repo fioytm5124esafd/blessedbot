@@ -1,0 +1,19 @@
+{
+  "name": "blessed-abuse-bot",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Bot de Blessed Abuse - panel, recompensas, historial y eventos de Rolas.es",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "register": "node src/register.js",
+    "check": "node --check src/main.js && node --check src/panel.js && node --check src/rewards.js && node --check src/storage.js && node --check src/commands.js && node --check src/embeds.js && node --check src/config.js && node --check src/register.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.5"
+  }
+}

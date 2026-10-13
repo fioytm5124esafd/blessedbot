@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "31301dee-2bc3-42ee-a178-9c8e60791d8a",
+      "createdAt": "2026-10-13T11:45:13.555Z",
+      "guildId": "1060503044246208583",
+      "type": "ban",
+      "userId": "311863380673822721",
+      "moderatorId": "311863380673822721",
+      "executedById": "311863380673822721",
+      "reason": "test",
+      "duration": "1 día",
+      "channelId": "1542216751633141912",
+      "messageId": "1559532388499988602",
+      "messageUrl": "https://discord.com/channels/1060503044246208583/1542216751633141912/1559532388499988602"
+    }
+  ],
+  "rewards": {
+    "notices": {},
+    "winners": {}
+  }
+}
