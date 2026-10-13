@@ -82,7 +82,7 @@ function sanctionPost(botUser, type, user, moderator, reason, duration) {
       { name: '• Usuario sancionado', value: `<@${user.id}>`, inline: true },
       { name: '• Aplicado Por', value: `<@${moderator.id}>`, inline: true },
       { name: '• Razon', value: codeBox(reason), inline: false },
-      { name: '• Jail', value: codeBox(duration), inline: false },
+      { name: '• Sanción', value: codeBox(duration), inline: false },
     );
   }
 
