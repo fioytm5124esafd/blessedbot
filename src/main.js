@@ -242,7 +242,7 @@ async function handleSanction(interaction) {
   const user = interaction.options.getUser('usuario', true);
   const moderator = interaction.options.getUser('aplicado_por') || interaction.user;
   const reason = interaction.options.getString(type === 'ban' ? 'motivo' : 'razon', true).trim();
-  const duration = interaction.options.getString(type === 'ban' ? 'duracion' : 'jail', true).trim();
+  const duration = interaction.options.getString(type === 'ban' ? 'duracion' : 'sancion', true).trim();
   if (!reason || !duration) throw new Error('El motivo y la duración no pueden estar vacíos.');
   await interaction.deferReply({ flags: MessageFlags.Ephemeral });
   const channelId = interaction.options.getChannel('canal')?.id ||

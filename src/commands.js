@@ -38,10 +38,10 @@ const commands = [
     .addUserOption(o => o.setName('aplicado_por').setDescription('Staff responsable (por defecto, tú)'))
     .addChannelOption(o => o.setName('canal').setDescription('Canal donde publicar el aviso').addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)),
 
-  staffCommand('sancion', 'Publica un aviso de jail; NO sanciona a nadie en Discord.')
+  staffCommand('sancion', 'Publica un aviso de sanción; NO sanciona a nadie en Discord.')
     .addUserOption(o => o.setName('usuario').setDescription('Usuario que aparecerá en el aviso').setRequired(true))
     .addStringOption(o => o.setName('razon').setDescription('Razón de la sanción').setRequired(true).setMaxLength(700))
-    .addStringOption(o => o.setName('jail').setDescription('Tiempo de jail, por ejemplo: 30 minutos').setRequired(true).setMaxLength(100))
+    .addStringOption(o => o.setName('sancion').setDescription('Tiempo de sanción, por ejemplo: 30 minutos').setRequired(true).setMaxLength(100))
     .addUserOption(o => o.setName('aplicado_por').setDescription('Staff responsable (por defecto, tú)'))
     .addChannelOption(o => o.setName('canal').setDescription('Canal donde publicar el aviso').addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)),
 

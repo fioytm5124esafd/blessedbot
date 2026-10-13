@@ -12,7 +12,7 @@ const { statusEmbed, currentCycle, postWinners } = require('./rewards');
 function historyEmbed(guildId, user) {
   const results = casesFor(guildId, user.id);
   const lines = results.slice(0, 10).map(record => {
-    const kind = record.type === 'ban' ? '🔨 Baneo' : record.type === 'sancion' ? '⛓️ Jail' : '🚨 Exposición';
+    const kind = record.type === 'ban' ? '🔨 Baneo' : record.type === 'sancion' ? '⛓️ Sanción' : '🚨 Exposición';
     const time = Math.floor(new Date(record.createdAt).getTime() / 1000);
     const reason = escapeMarkdown(String(record.reason || 'Sin motivo').slice(0, 130)).replace(/[\r\n]/g, ' ');
     const duration = record.duration ? ` · ${escapeMarkdown(String(record.duration).slice(0, 55))}` : '';
@@ -91,7 +91,7 @@ function caseModal(action, id) {
   } else if (action === 'sancion') {
     modal.setTitle('Blessed Abuse • Nueva sanción').addComponents(
       addField('razon', 'Motivo de la sanción', 700, TextInputStyle.Paragraph),
-      addField('duracion', 'Tiempo de jail', 100, TextInputStyle.Short, 'Ej.: 30 minutos'));
+      addField('duracion', 'Tiempo de sanción', 100, TextInputStyle.Short, 'Ej.: 30 minutos'));
   } else {
     modal.setTitle('Blessed Abuse • Nueva exposición').addComponents(
       addField('server', 'Servidor que expone', 100, TextInputStyle.Short, 'Blessed Abuse'),
